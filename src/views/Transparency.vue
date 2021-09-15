@@ -6,6 +6,7 @@
       <v-list-item
         v-for="informe in informes"
         :key="informe"
+        v-if="!informe.includes('.php')"
         :href="'/archivos/informes/' + informe"
       >
         <v-list-item-avatar>
@@ -33,6 +34,7 @@ export default {
   beforeMount: function() {
     $.getJSON($(location).attr("origin") + "/archivos/informes", data => {
       this.informes = data;
+      console.warn(data);
     });
   },
   data: () => ({
