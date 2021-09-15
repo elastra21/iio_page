@@ -1,0 +1,26 @@
+{
+  "slider": [
+    {
+      "title": "Investigaciones Oceanológicas",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+      "background": "https://images.freeimages.com/images/large-previews/947/sea-turtle-1372628.jpg"
+    },
+    {
+      "title": "Slide 22",
+      "description": "hola Eddie",
+      "background": "https://images.freeimages.com/images/large-previews/fda/diver-1409937.jpg"
+    },
+    {
+      "title": "Slide 33",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+      "background": "https://images.freeimages.com/images/large-previews/6b0/barracuda-1362522.jpg"
+    }
+  ],
+  "banner": {
+    "starts": "9/9/2021, 8:51:10 AM",
+    "ends": "9/14/2021, 6:21:10 PM",
+    "icon": "mdi-account-check",
+    "title": "Le Banner",
+    "description": "información del banner, bla bla bla, "
+  }
+}
