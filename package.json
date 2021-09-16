@@ -12,6 +12,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "core-js": "^3.17.3",
+    "element-ui": "^2.4.5",
     "jquery": "^3.6.0",
     "lottie-vuejs": "^0.4.0",
     "vue": "^2.6.11",
@@ -25,8 +26,10 @@
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "deepmerge": "^4.2.2",
+    "node-sass": "^4.9.2",
     "sass": "~1.32",
     "sass-loader": "10",
+    "vue-cli-plugin-element": "~1.0.1",
     "vue-cli-plugin-vuetify": "^2.4.2",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.0"

@@ -5,6 +5,7 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import './plugins/element.js'
 
 Vue.config.productionTip = false;
 
