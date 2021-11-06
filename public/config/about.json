@@ -3,5 +3,124 @@
     "facebook": "https://www.facebook.com/IIO.UABC",
     "instagram": "https://www.instagram.com/iio_uabc/"
   },
-  "location": {}
+  "location": {},
+  "personal": [
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "job": [],
+      "email": "",
+      "webPage": "",
+      "phone": "",
+      "ext": ""
+    }
+  ]
 }
