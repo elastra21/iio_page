@@ -1,82 +1,271 @@
-.header-1 {
-  font-family: "Lato";
-  font-size: 35px;
-  font-weight: 900;
-  font-stretch: normal;
+$dark-grey: #333333;
+$mid-grey: #666666;
+$yellow: #f4c268;
+$green: #206a35;
+$dark-blue: #193041;
+$light-blue: #3875ca;
+
+h1 {
+  font-family: Poppins;
   font-style: normal;
-  line-height: 1.11;
-  letter-spacing: normal;
-  text-align: left;
-  color: #304659;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 64px;
+  /* identical to box height, or 123% */
+
+  color: black;
 }
-.underline-header-3 {
-  font-family: Poppins, sans-serif;
-  font-weight: 800;
-  color: midnightblue;
-  font-size: 22px;
-  text-decoration: underline;
-  margin-bottom: 20px;
+
+.v-carousel__controls {
+  margin-bottom: 50px !important;
 }
-.header-4 {
-  font-family: "Lato";
-  font-weight: 800;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: darkslategrey;
+
+.v-expansion-panel {
+  border-bottom: 1px solid #bbbbbb;
+  .v-expansion-panel-header {
+    height: 74px !important;
+
+    .mdi-chevron-down::before {
+      color: #b5b5b5;
+      content: "\F0142" !important;
+    }
+  }
 }
-.thin-light-header-4 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: dimgray;
-  font-size: 18px;
+.v-expansion-panel--active
+  > .v-expansion-panel-header--active
+  .v-expansion-panel-header__icon:not(.v-expansion-panel-header__icon--disable-rotate)
+  .v-icon {
+  transform: rotate(90deg) !important;
 }
-.titles-bold {
-  font-family: "Lato";
-  font-size: 17px;
-  font-weight: 900;
-  font-stretch: normal;
+
+h2 {
+  font-family: Poppins;
+  font-style: bold;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 54px;
+  /* identical to box height */
+}
+
+h3 {
+  font-family: Poppins;
   font-style: normal;
-  line-height: 1.24;
-  letter-spacing: normal;
-  text-align: left;
-  color: #304659;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  /* identical to box height, or 117% */
+
+  color: black;
 }
-.titles {
-  font-family: "Lato";
-  font-size: 17px;
-  font-stretch: normal;
+
+h4 {
+  font-family: Poppins;
   font-style: normal;
-  line-height: 1.24;
-  letter-spacing: normal;
-  text-align: left;
-  color: #304659;
-}
-.light-titles {
-  font-family: "Lato";
-  font-weight: 500;
-  color: grey;
-  font-size: 16px;
-  line-height: 1.24;
-}
-.s-light-subtitles {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  color: #999;
-  font-size: 12px;
-}
-.xs-subtitles {
-  font-size: 10px;
-  text-transform: capitalize;
-  color: gray;
-}
-.xs-bold-subtitles {
-  font-size: 9px;
-  text-transform: uppercase;
-  color: gray;
-  font-weight: 900;
-}
-.center-text {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 42px;
   text-align: center;
+
+  color: black;
+}
+h5 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+h6 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 25px;
+}
+.h2-alt {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 42px;
+  /* identical to box height */
+
+  color: black;
+}
+.body {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 28px;
+  /* identical to box height, or 165% */
+
+  color: black;
+}
+
+.body-2 {
+  font-family: Raleway !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 15px !important;
+  line-height: 23px !important;
+  /* identical to box height, or 187% */
+
+  font-feature-settings: "pnum" on, "lnum" on;
+
+  color: black;
+}
+
+.links {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 28px;
+  /* or 165% */
+
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.tag {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 28px;
+  /* identical to box height, or 187% */
+
+  text-decoration-line: underline;
+
+  color: black;
+}
+
+.cta {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 28px;
+  /* identical to box height, or 215% */
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: black;
+}
+
+.read-more {
+  position: relative;
+  width: 139px;
+  height: 39px;
+  background-color: $green;
+  border-radius: 72px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* effect-1 styles */
+
+.read-more {
+  transition: all 0.2s linear 0s;
+  &::before {
+    content: "\F005C";
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+  }
+
+  &:hover {
+    text-indent: -20px;
+
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}
+
+.yellow-fill {
+  background: $yellow;
+  color: $dark-blue;
+}
+.green-fill {
+  background: $green;
+  color: white;
+}
+
+.mid-grey {
+  color: $mid-grey !important;
+}
+
+.grey-2 {
+  color: #525252 !important;
+}
+
+.dark-gray {
+  color: $dark-grey !important;
+}
+
+.header {
+  background-color: $dark-blue;
+  position: relative;
+}
+.tier-1 {
+  height: 857px !important;
+}
+.tier-2 {
+  height: 440px !important;
+}
+.curve {
+  display: block !important;
+  opacity: 1 !important;
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.curve svg {
+  position: relative;
+  display: block;
+  width: calc(269% + 1.3px);
+  height: 143px;
+}
+
+.curve .shape-fill {
+  fill: white;
+}
+
+.center-text {
+  text-align: center !important;
+}
+.ultra-thin {
+  font-weight: 100 !important;
+}
+.thin {
+  font-weight: 300 !important;
+}
+.bold {
+  font-weight: 600 !important;
+}
+.underline {
+  text-decoration: underline;
+}
+.uppercase {
+  text-transform: uppercase !important;
+}
+.capitalize {
+  text-transform: capitalize;
 }
 
 /* devanagari */
@@ -282,93 +471,4 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
-}
-
-.header-fg-alt {
-  color: #222a42;
-  line-height: 1.05;
-  font-weight: 400;
-  font-size: 47px;
-  font-family: "Poppins";
-  text-transform: capitalize;
-}
-.header-1-alt {
-  color: #222a42;
-  line-height: 1.05;
-  font-weight: 400;
-  font-size: 2.0625rem;
-  font-family: "Poppins";
-  // text-transform: capitalize;
-}
-.header-2-alt {
-  font-family: "Poppins";
-  color: #222a42;
-  line-height: 1.2;
-  font-weight: 400;
-  font-size: 1.6875rem;
-}
-
-.header-3-alt {
-  font-family: "Poppins";
-  color: #222a42;
-  line-height: 1.4;
-  font-weight: 400;
-  font-size: 1.43rem;
-}
-
-.header-4-alt {
-  font-family: "Poppins";
-  color: #222a42;
-  line-height: 1.4;
-  font-weight: 400;
-  font-size: 1.043rem;
-}
-
-.header-5-alt {
-  font-family: "Poppins";
-  color: #222a42;
-  line-height: 1.4;
-  font-weight: 400;
-  font-size: 0.81rem;
-}
-.header-6-alt {
-  font-family: "Poppins";
-  color: #222a42;
-  line-height: 1.2;
-  font-weight: 600;
-  font-size: 0.75rem;
-}
-.bold-names {
-  font-family: "Poppins";
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(34, 42, 66, 0.7);
-}
-.paragraph {
-  font-family: "Poppins";
-  color: #222a42;
-  font-weight: 300;
-  font-size: 0.875rem;
-}
-.mate {
-  color: #1d253b;
-}
-.light {
-  color: #9a9a9a;
-}
-.ultra-thin {
-  font-weight: 100 !important;
-}
-.thin {
-  font-weight: 300 !important;
-}
-.bold {
-  font-weight: 600 !important;
-}
-.underline {
-  text-decoration: underline;
-}
-.uppercase {
-  text-transform: uppercase;
 }

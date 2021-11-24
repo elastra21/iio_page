@@ -1,87 +1,258 @@
-#app {
-  .logo-header {
-    padding-left: 15px;
-    padding-right: 50px;
-    z-index: 100;
+@import "../../assets/styles/global.scss";
+.el-submenu__title {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding: 0 15px !important;
+  height: 100% !important;
+  border: none !important;
+  i {
+    position: absolute;
+    right: 0px;
   }
+}
 
-  .navWrapper {
+.el-menu--popup {
+  padding: 0px !important;
+  border-radius: 0px !important;
+  overflow: hidden;
+  border-left: 1px #3875ca solid !important;
+  .el-menu-item,
+  .el-submenu__title {
+    border: 0.5px solid transparent;
+    padding: 12px 22px !important;
+    justify-content: flex-start;
+    height: auto !important;
+    i {
+      position: relative;
+      margin-left: 10px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.el-submenu {
+  padding: 0 !important;
+}
+
+.navWrapper {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease-out;
+}
+
+.logo-header {
+  padding-left: 15px;
+  padding-right: 50px;
+  z-index: 100;
+}
+
+.el-menu.el-menu--horizontal {
+  padding: 0px;
+  height: 100%;
+}
+
+#menu {
+  width: 100%;
+  height: 91px;
+
+  ul {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
     width: 100%;
-    position: fixed;
-    top: 0;
+    margin: 0;
+    padding: 0;
   }
 
-  #logo.el-menu-item.is-active {
-    border-bottom-color: transparent;
+  li {
+    height: 100%;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+    background-color: transparent !important;
+  }
+}
+
+.el-submenu__title,
+.el-menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: Raleway !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 15px !important;
+  line-height: 18px !important;
+  /* identical to box height */
+  text-transform: capitalize !important;
+  /* identical to box height */
+}
+// .el-menu-item.is-active,
+// .el-submenu.is-active {
+//   *{color: inherit !important;}
+// }
+
+.dark-menu {
+  background-color: $dark-blue !important;
+
+  .el-submenu__title,
+  .el-menu-item {
+    background: white !important;
+    background-color: transparent !important;
+    color: white !important;
+  }
+  #toggle .span {
+    background: white !important;
+  }
+}
+.light-menu {
+  background-color: white !important;
+
+  .el-submenu__title,
+  .el-menu-item {
+    background: $mid-grey !important;
+    background-color: transparent !important;
+    color: $mid-grey !important;
+  }
+  #toggle .span {
+    background: $mid-grey !important;
+  }
+}
+
+#logo.el-menu-item.is-active {
+  border-bottom-color: transparent !important;
+}
+
+#toggle {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#toggle .span {
+  border-radius: 10px;
+  height: 2px;
+  margin: 7px 0 !important;
+  background: $nav-toggle-color;
+  transition: all 0.3s ease-out;
+  backface-visibility: hidden;
+}
+
+#top.span.active {
+  transform: rotate(45deg) translateX(3px) translateY(5px);
+}
+
+#middle.span.active {
+  opacity: 0;
+}
+
+#bottom.span.active {
+  transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+@media only screen and (max-width: $screen-lg-min) {
+  .logo-header {
+    padding: 0;
   }
 
   #toggle {
-    position: absolute;
-    right: 20px;
-    top: 14px;
-    z-index: 999;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    float: right;
-    transition: all 0.3s ease-out;
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0px;
   }
 
   #toggle .span {
-    border-radius: 10px;
-    background: $nav-toggle-color;
+    height: 2px;
+    margin: 5px 0;
+    background-color: white;
     transition: all 0.3s ease-out;
-    backface-visibility: hidden;
+    backface-visibility: visible;
+    visibility: visible;
+    opacity: 1;
   }
 
-  #top.span.active {
-    transform: rotate(45deg) translateX(3px) translateY(5px);
+  #menu .el-menu-item {
+    display: none;
+    color: inherit;
+    text-decoration: none;
+    width: 100vw;
+  }
+  .el-menu-item {
+    width: 100vw;
+    justify-content: center !important;
+  }
+  .el-menu--horizontal .el-menu .el-menu-item,
+  .el-menu--horizontal .el-menu .el-submenu__title {
+    justify-content: center !important;
   }
 
-  #middle.span.active {
-    opacity: 0;
+  #menu .el-submenu {
+    display: none;
   }
 
-  #bottom.span.active {
-    transform: rotate(-45deg) translateX(8px) translateY(-10px);
+  .el-menu--horizontal {
+    background-color: transparent;
+    height: 91px;
   }
 
-  @media only screen and (max-width: $screen-md-min) {
-    .logo-header {
+  #menu #logo {
+    display: block;
+    visibility: visible !important;
+    position: absolute;
+    width: 110px;
+    margin-left: 10px;
+    margin-top: -53px;
+    border: none !important;
+  }
+
+  #menu {
+    display: block !important;
+    transition: all 0.3s ease-out;
+    height: 52px !important;
+    border-bottom: 1px white solid;
+
+    ul {
+      display: block;
+      top: 52px;
+      transition: all 0.3s ease-out;
+      align-items: stretch; /* Default */
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
       padding: 0;
     }
 
-    #toggle {
+    li {
+      visibility: hidden;
+      height: 52px !important;
+      flex: 0 1 auto; /* Default */
+      list-style-type: none;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+
+  #menu.active {
+    visibility: visible;
+    opacity: 0.98;
+    height: 416px !important;
+    transition: all 0.3s ease-out;
+    li {
       visibility: visible;
-      opacity: 1;
-      margin-top: 6px;
     }
-
-    #toggle .span {
-      height: 4px;
-      margin: 5px 0;
-      transition: all 0.3s ease-out;
-      backface-visibility: visible;
-      visibility: visible;
-      opacity: 1;
-    }
-
-    #menu .el-menu-item {
-      display: none;
-    }
-    #menu .el-submenu {
-      display: none;
-    }
-
-    #menu.active {
-      margin: 70px 0;
-      visibility: visible;
-      opacity: 0.98;
-      transition: all 0.5s ease-out;
-
-      @include sm-menu;
-    }
+    @include sm-menu;
   }
 }

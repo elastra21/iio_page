@@ -15,7 +15,10 @@
     "element-ui": "^2.4.5",
     "jquery": "^3.6.0",
     "lottie-vuejs": "^0.4.0",
+    "pdfjs-dist": "2.0.489",
     "vue": "^2.6.11",
+    "vue-i18n": "^8.26.7",
+    "vue-light-gallery": "^1.0.1",
     "vue-router": "^3.2.0",
     "vuetify": "^2.4.0",
     "vuex": "^3.4.0"

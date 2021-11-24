@@ -1,67 +1,65 @@
 <template>
-  <div class="about" style="margin-top:70px;">
-    <v-list subheader two-line class="pt-5">
-      <v-header inset class="header-1 thin">Informes</v-header>
-
-      <v-list-item
-        v-for="informe in informes"
-        :key="informe"
-        v-if="!informe.includes('.php')"
-        :href="'/archivos/informes/' + informe"
-      >
-        <v-list-item-avatar>
-          <v-icon class="grey lighten-1" dark v-text="getMime(informe)" />
-        </v-list-item-avatar>
-
-        <v-list-item-content>
-          <v-list-item-title v-text="informe"></v-list-item-title>
-
-          <!-- <v-list-item-subtitle v-text="folder.subtitle"></v-list-item-subtitle> -->
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
-    <!-- <v-btn text v-for="informe in informes" :key="informe" :href="'/archivos/informes/' + informe">
-      {{ informe }}
-    </v-btn> -->
-  </div>
+  <v-container fluid class="pa-0" style="margin-top:150px;">
+    <v-container class="mb-15">
+      <h2 class=" pl-2">Transparencia</h2>
+      <v-layout row wrap class="mt-15">
+        <v-flex
+          xs12
+          sm6
+          md6
+          lg6
+          xl6
+          class="align-center justify-center d-flex"
+          v-for="(proceso, index) in procesos"
+          :key="index"
+        >
+          <ProcessCell data-aos="fade-up" :data-aos-delay="50 * index" :process="proceso" />
+        </v-flex>
+      </v-layout>
+    </v-container>
+    <ScrollToTop />
+  </v-container>
 </template>
 
 <script>
-import $ from "jquery";
+import { ProcessCell } from "../components/Lists";
+import { ScrollToTop } from "../components/Form";
 export default {
-  name: "About",
-  components: {},
-  beforeMount: function() {
-    $.getJSON($(location).attr("origin") + "/archivos/informes", data => {
-      this.informes = data;
-      console.warn(data);
-    });
-  },
+  name: "transparencia-wrapper",
+  components: { ProcessCell, ScrollToTop },
   data: () => ({
-    informes: []
-  }),
-  methods: {
-    getMime: function(file) {
-      const normalizedFile = file.toLowerCase();
-      const dotIndex = normalizedFile.lastIndexOf(".");
-      const mime = normalizedFile.substring(dotIndex, file.length);
-      switch (mime) {
-        case ".pdf":
-          return "mdi-file-pdf-box";
-        case ".jpg":
-          return "mdi-file-image-outline";
-        case ".png":
-          return "mdi-file-image-outline";
-        default:
-          return "mdi-folder";
+    procesos: [
+      {
+        name: "Estatutos, Reglamentos y Manuales",
+        image: "",
+        subtitle: "Normatividad del Instituto y nuestro Manual de Organización.",
+        route: "#"
+      },
+      {
+        name: "Informes",
+        image: "",
+        subtitle: "Los informes de actividades de los directores del Instituto.",
+        route: "Informes"
+      },
+      {
+        name: "Consejos, Comités y Academias",
+        image: "",
+        subtitle:
+          "Integrantes de las distintas comisiones y comités que integran nuestro instituto. ",
+        route: "#"
+      },
+      {
+        name: "Brigada de Seguridad ",
+        image: "",
+        subtitle: "Integrantes de la brigada de seguridad del Instituto.",
+        route: ""
       }
-    }
-  }
+    ]
+  })
 };
 </script>
 <style lang="scss" scooped>
-.about {
-  padding-right: 20px;
-  padding-left: 20px;
+.transparencia-wrapper {
+  margin-top: 80px;
 }
 </style>

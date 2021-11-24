@@ -5,7 +5,9 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import './plugins/element.js'
+import "@/styles/index.scss"; // global css
+import "./plugins/element.js";
+import i18n from "./i18n";
 
 Vue.config.productionTip = false;
 
@@ -19,6 +21,7 @@ fetch(process.env.BASE_URL + "config/home.json")
           duration: 800
         });
       },
+      i18n,
       router,
       store,
       vuetify,
