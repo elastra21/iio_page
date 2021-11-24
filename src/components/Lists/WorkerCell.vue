@@ -76,7 +76,14 @@ export default {
   margin: 10px;
   display: flex;
 }
-
+.header-fg-alt {
+  color: #222a42;
+  line-height: 1.05;
+  font-weight: 400;
+  font-size: 47px;
+  font-family: "Poppins";
+  text-transform: capitalize;
+}
 .bottom-section {
   width: 100%;
   flex: 1;

@@ -3,50 +3,29 @@
     <v-container fluid class=" mt-15" style="position:relative" v-if="data !== null">
       <v-row justify="center" style=" margin-top:50px; position:relative" no-gutters>
         <v-col cols="12" md="7" lg="7" xl="6" class="px-10 d-flex flex-column">
-          <h5>{{ this.data.title }}</h5>
-          <p class="body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel facilisi hendrerit tellus
-            eu netus. Sit penatibus massa vulputate id in enim at sodales faucibus. Ac quisque in
-            libero nulla libero bibendum lorem aliquet cursus. Dignissim malesuada adipiscing
-            habitasse auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel facilisi
-            hendrerit tellus eu netus. Sit penatibus massa vulputate id in enim at sodales faucibus.
-            Ac quisque in libero nulla libero bibendum lorem aliquet cursus. Dignissim malesuada
-            adipiscing habitasse auctor. Mission vision and value statements are said to be very
-            important to the success of a company. In fact, business consultants often start with
-            the mission, vision, and values when working with new clients. They do this for a very
-            simple reason. Creating (or updating) these statements can drive the organization in a
-            new direction
-          </p>
-          <p class="title1" style="margin-top:100px">Lorem ipsum</p>
-          <p class="paragraph1">
-            Mission vision and value statements are said to be very important to the success of a
-            company. In fact, business consultants often start with the mission, vision, and values
-            when working with new clients. They do this for a very simple reason. Creating (or
-            updating) these statements can drive the organization in a new direction
-          </p>
+          <v-img
+            width="100%"
+            height="260"
+            class="image__posgrados"
+            v-if="images.length > 0"
+            :src="images[0]"
+          >
+            <h4 class="image-inner-text">{{ this.data.title }}</h4>
+          </v-img>
+          <h5>{{ $t("descripcion") }}</h5>
+          <p class="body mt-3" v-html="data.description" />
 
-          <v-img class="image__posgrados"> </v-img>
-          <p class="paragraph1">
-            Mission vision and value statements are said to be very important to the success of a
-            company. In fact, business consultants often start with the mission, vision, and values
-            when working with new clients. They do this for a very simple reason. Creating (or
-            updating) these statements can drive the organization in a new direction. Mission vision
-            and value statements are said to be very important to the success of a company. In fact,
-            business consultants often start with the mission, vision, and values when working with
-            new clients. They do this for a very simple reason. Creating (or updating) these
-            statements can drive the organization in a new direction. Mission vision and value
-            statements are said to be very important to the success of a company. In fact, business
-            consultants often start with the mission, vision, and values when working with new
-            clients. They do this for a very simple reason. Creating (or updating) these statements
-            can drive the organization in a new direction.
-          </p>
-          <v-img class="image__posgrados"> </v-img>
+          <button class=" cta read-more " @click="openLink()">
+            {{ $t("leerMas") }}
+          </button>
+
+          <!-- <v-img class="image__posgrados"> </v-img> -->
         </v-col>
 
         <v-col cols="2" style="max-width:300px; width: 300px !important; position:relative">
           <div v-if="!isTablet" class="aside">
             <div class="wrapper-shit">
-              <h6>Posgrados</h6>
+              <h6>{{ $t("posgrados.title") }}</h6>
               <div class="options  ">
                 <router-link
                   :to="{ path: '/posgrados/doctorado-en-medio-ambiente-y-desarrollo' }"
@@ -54,6 +33,13 @@
                   style="width:300px"
                 >
                   Doctorado en Medio Ambiente y Desarrollo
+                </router-link>
+                <router-link
+                  :to="{ path: '/posgrados/gestion-ambiental' }"
+                  class="links option-item"
+                  style="width:300px"
+                >
+                  Especialidad en Gestión Ambiental
                 </router-link>
                 <router-link
                   :to="{ path: '/posgrados/oceanografia-costera' }"
@@ -64,7 +50,7 @@
                 </router-link>
               </div>
 
-              <h6 style="margin-top:95px">Investigación</h6>
+              <h6 style="margin-top:95px">{{ $t("investigacion.title") }}</h6>
               <div class="options  ">
                 <router-link
                   :to="{ path: '/investigacion/Acuacultura' }"
@@ -135,7 +121,8 @@ export default {
     return {
       images: [],
       isTablet: window.innerWidth < 960,
-      data: null
+      data: null,
+      publicPath: $(location).attr("origin") + "/archivos/posgrados/"
     };
   },
   computed: {
@@ -151,20 +138,22 @@ export default {
       if (!this.data) {
         this.$router.push({ name: "404" });
       } else {
-        // const loading = this.$loading();
+        const loading = this.$loading();
         const { name } = this.data;
         $.getJSON($(location).attr("origin") + `/archivos/posgrados/${name}`, data => {
-          console.warn(data);
-          // if (data !== null)
-          //   data.forEach((image, i) => {
-          //     this.images.push(this.publicPath + `${name}/${image}`);
-          //   });
+          if (data !== null)
+            data.forEach((image, i) => {
+              this.images.push(this.publicPath + `${name}/${image}`);
+            });
           setTimeout(() => loading.close(), 1000);
         });
       }
     }
   },
   methods: {
+    openLink() {
+      window.open(this.data.link);
+    },
     onresize: function() {
       this.isTablet = window.innerWidth < 960;
     }
@@ -201,14 +190,20 @@ h5 {
     color: white !important;
   }
 }
+.image-inner-text {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-left: 10px;
+  color: white;
+}
 .posgrados {
   display: flex;
   position: relative;
   // padding-top: 200px;
 
   .image__posgrados {
-    width: 623px;
     height: 245px;
+    max-height: 350px;
     background-color: #c4c4c4;
     border-radius: 5px;
     align-self: center;

@@ -3,7 +3,7 @@
     <v-row align="center" justify="center" class="tier-2 header">
       <div class="d-flex white-filter" />
       <v-col class=" d-flex text-center flex-column ">
-        <h2 class="uppercase white--text pl-2">Incidencia social</h2>
+        <h2 class="uppercase white--text pl-2" v-html="$t('incidencia')" />
       </v-col>
       <v-col class=" d-flex  flex-column ">
         <p class="body header-description white--text">
@@ -43,19 +43,19 @@
                   :key="vinculacion.name"
                   :href="item.link"
                   class="body option-item dark-gray"
-                  v-text="item.name"
+                  v-text="`- ${item.name}`"
                 />
               </div>
             </div></div
         ></v-col>
         <v-col cols="12" md="7" lg="7" xl="7" class="px-0 d-flex flex-column">
-          <h5 class="pb-4 dark-gray">Investigación</h5>
+          <h5 class="pb-4 dark-gray">{{ $t("vinculacion.title") }}</h5>
           <v-divider
             style="backgroundColor:black; border-bottom-width:2px !important; width:100%"
           />
           <v-row class="pa-0 pt-10">
             <v-col data-aos="zoom-in" class="" cols="12" xl="4" lg="4" md="4" sm="6">
-              <h5>Algunos proyectos y servicios que el instituto ha desarrollado:</h5>
+              <h5>{{ $t("vinculacion.message") }}</h5>
               <!-- <span class="body pt-1" style="max-width:220px">
                 Algunos proyectos y servicios que el instituto ha desarrollado:
               </span> -->
@@ -66,7 +66,7 @@
               :data-aos-delay="Math.floor(Math.random() * 100)"
               data-aos="zoom-in"
             >
-              <v-img aspect-ratio="1" class="gallery-item" height="250" />
+              <v-img :src="alumnos" aspect-ratio="1" class="gallery-item" height="250" />
             </v-col>
           </v-row>
           <v-row>
@@ -112,6 +112,7 @@ export default {
     selected: null
   }),
   computed: {
+    alumnos: () => require("../assets/images/alumnos.jpeg"),
     vinculacion() {
       return this.$info.vinculacion;
     }

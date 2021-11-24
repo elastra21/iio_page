@@ -125,6 +125,12 @@
               {{ $t("posgrados.doctorado") }}
             </el-menu-item>
             <el-menu-item
+              index="/posgrados/gestion-ambiental"
+              :route="{ path: '/posgrados/gestion-ambiental' }"
+            >
+              {{ $t("posgrados.gestion") }}
+            </el-menu-item>
+            <el-menu-item
               index="/posgrados/oceanografia"
               :route="{ path: '/posgrados/oceanografia-costera' }"
             >

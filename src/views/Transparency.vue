@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="pa-0" style="margin-top:150px;">
     <v-container class="mb-15">
-      <h2 class=" pl-2">Transparencia</h2>
+      <h2 class=" pl-2">{{ $t("transparencia") }}</h2>
       <v-layout row wrap class="mt-15">
         <v-flex
           xs12

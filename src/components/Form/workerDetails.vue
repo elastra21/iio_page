@@ -235,6 +235,14 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/styles/global";
+.header-fg-alt {
+  color: #222a42;
+  line-height: 1.05;
+  font-weight: 400;
+  font-size: 47px;
+  font-family: "Poppins";
+  text-transform: capitalize;
+}
 .v-expansion-panel {
   border-bottom: 1px solid #bbbbbb;
   .v-expansion-panel-header {

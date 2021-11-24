@@ -25,7 +25,6 @@
               <h6 class="mt-10">-{{ ca.name }}</h6>
               <div
                 class="px-5"
-                :style="index % 2 == 0 ? 'float:left' : 'float:right'"
                 v-for="(integrante, index) in ca.integrantes"
                 :key="integrante.name"
               >
@@ -65,7 +64,7 @@
         <v-col cols="2" style="max-width:300px; width: 300px !important; position:relative">
           <div v-if="!isTablet" class="aside">
             <div class="wrapper-shit">
-              <h6>Investigación</h6>
+              <h6>{{ $t("investigacion.title") }}</h6>
               <div class="options  ">
                 <router-link
                   :to="{ path: '/investigacion/Acuacultura' }"
@@ -110,7 +109,7 @@
                   Laboratorio de Paleoceanografía
                 </router-link>
               </div>
-              <h6 style="margin-top:95px">Posgrados</h6>
+              <h6 style="margin-top:95px">{{ $t("posgrados.title") }}</h6>
 
               <div class="options  ">
                 <router-link
@@ -119,6 +118,13 @@
                   style="width:300px"
                 >
                   Doctorado en Medio Ambiente y Desarrollo
+                </router-link>
+                <router-link
+                  :to="{ path: '/posgrados/gestion-ambiental' }"
+                  class="links option-item"
+                  style="width:300px"
+                >
+                  Especialidad en Gestión Ambiental
                 </router-link>
                 <router-link
                   :to="{ path: '/posgrados/oceanografia-costera' }"

@@ -19,6 +19,7 @@
     "oferta": "Oferta Académica",
     "doctorado": "Doctorado en Medio Ambiente y Dessarrollo",
     "oceanografia": "Oceanografía Costera",
+    "gestion": "Especialidad en Gestión Ambiental",
     "calendario": "Calendario"
   },
   "transparencia": "Transparencia",
@@ -59,6 +60,7 @@
     "content": "Actividades científcas, docentes y de vinculación del IIO."
   },
   "privacidad": "Aviso de privacidad",
+  "derechos_reservados": " todos los derechos reservados.",
   "sobreNosotros": {
     "title": "Sobre Nosotros",
     "content": "Hoy más que nunca estamos comprometidos con la ciencia de frontera, así como con las oportunidades de incidir en el desarrollo social y el cuidado ambiental."
@@ -88,5 +90,9 @@
     "telefono": "Teléfono",
     "redesSociales": "Redes Sociales"
   },
-  "descripcion": "Descripción"
+  "descripcion": "Descripción",
+  "vinculacion": {
+    "title": "IIO en la sociedad",
+    "message": "Proyectos y servicios desarrollados por el IIO :"
+  }
 }

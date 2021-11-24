@@ -69,7 +69,7 @@
                 <i class="el-icon-lock" /> {{ $t("privacidad") }}
               </a>
               <br />
-              © &nbsp;2021 Instituto de Investigaciones Oceanológicas todos los derechos reservados.
+              © &nbsp;2021 Instituto de Investigaciones Oceanológicas{{ $t("derechos_reservados") }}
             </div>
           </v-col>
           <v-col class="d-flex justify-center align-center" cols="10" sm="8" md="4" lg="4" xl="4">

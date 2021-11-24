@@ -1498,14 +1498,166 @@
     {
       "name": "doctorado-en-medio-ambiente-y-desarrollo",
       "title": "Doctorado en Medio Ambiente y Dessarrollo",
-      "link": ""
+      "description": "El programa propone un plan de estudios cuyo objetivo es introducir al alumno en las diversas metodologías para el estudio del medio ambiente y la planeación del desarrollo a través de la resolución de una serie de preguntas de investigación. Deseamos que el alumno idealmente sea capaz de analizar, entender y actuar sobre un sistema tratándolo como un todo.",
+      "link": "http://ambiente.ens.uabc.mx/"
     },
     {
       "name": "oceanografia-costera",
       "title": "Oceanografía Costera",
-      "link": ""
+      "description": "Desde 1990, los programas de Maestría y Doctorado en Oceanografía Costera están comprometidos en llevar a cabo investigación básica y aplicada, encaminada hacia la generación de nuevos conocimientos en el área de las ciencias del mar, que permitan un aprovechamiento responsable y sostenible de los recursos marinos y costeros.",
+      "link": "http://fcm.ens.uabc.mx/posgrado/oceanografia-costera.php"
+    },
+    {
+      "name": "gestion-ambiental",
+      "title": "Especialidad en Gestión Ambiental",
+      "description": "Especialidad profesionalizante que tiene como objetivo que profesionistas de diversas disciplinas se encuentren y enseñen/aprendan las herramientas tecnológicas más usuales para analizar y tomar decisiones de problemas vigentes en el uso de los recursos naturales.",
+      "link": "http://fcm.ens.uabc.mx/posgrado/gestion-ambiental-especialidad.php"
     }
   ],
+  "transparency": {
+    "cca": {
+      "comites": [
+        {
+          "name": "comité de estudios de posgrado (medio ambiente y desarrollo)",
+          "integrantes": [
+            { "name": "Dra. Cira Gabriela Montaño Moctezuma" },
+            { "name": "Dr. Rafael Bello Bedoy " },
+            { "name": "Dr. Luis Malpica Cruz" },
+            { "name": "Dr. Alberto Zepeda Domínguez" }
+          ]
+        },
+        {
+          "name": "comité de ética y de evaluación de investigación y posgrado",
+          "integrantes": [
+            { "name": "Dr. Luis Malpica Cruz " },
+            { "name": "Dra. Nancy Ramírez Álvarez " },
+            { "name": "Dr. Juan Gabriel Correa Reyes " },
+            { "name": "Dra. Mariana Villada Canela" }
+          ]
+        },
+        {
+          "name": "comité de seguridad en actividades marinas ",
+          "integrantes": [
+            { "name": "Dr. José Antonio Zertuche González" },
+            { "name": "Dr. Luis Malpica Cruz" },
+            { "name": "Dr. Guillermo Alberto Samperio Ramos " },
+            { "name": "Dr. Efraín Miguel Chávez Solís" },
+            { "name": "Ocean. José Manuel Guzmán Calderón " },
+            { "name": "M.C. Eunise Vanessa Torres Delgado " },
+            { "name": "Ocen. Arturo Siqueiros Valencia" }
+          ]
+        }
+      ],
+      "consejos": [
+        {
+          "name": "consejeros universitarios",
+          "integrantes": [
+            {
+              "name": "Dr. Luis Felipe Navarro Olache",
+              "positions": "propietario"
+            },
+            {
+              "name": "Dra. María Teresa Viana Castrillón ",
+              "positions": "suplente"
+            }
+          ]
+        },
+        {
+          "name": "consejo de vinculación",
+          "integrantes": [
+            {
+              "name": "Dra. María Teresa Viana Castrillon",
+              "positions": "internos"
+            },
+            { "name": "Dr. Héctor Garcia Nava", "positions": "internos" },
+            { "name": "Dr. Xavier Flores Vidal", "positions": "internos" },
+            {
+              "name": "Ocean. Héctor Manuel González Alcalá",
+              "positions": "externos"
+            },
+            {
+              "name": "Ocean Erick Alfonso Peterson Chinolla",
+              "positions": "externos"
+            }
+          ]
+        },
+        {
+          "name": "consejo técnico de investigación",
+          "integrantes": [
+            {
+              "name": "Dr. Víctor Froylan Camacho Ibar",
+              "positions": "propietario"
+            },
+            { "name": "Dr. Xavier Flores Vidal", "positions": "suplente" }
+          ]
+        },
+        {
+          "name": "Consejeros representantes de los investigadores",
+          "integrantes": [
+            { "name": "Dr. Gabriel Correa Reyes", "positions": "propietario" },
+            {
+              "name": "Dr. Francisco Delgadillo Hinojosa",
+              "positions": "suplente"
+            }
+          ]
+        },
+        {
+          "name": "consejeros jefes de área",
+          "integrantes": [
+            { "name": "Dr. Nancy Ramírez Álvarez", "positions": "propietario" },
+            {
+              "name": "Dr. José Miguel Sandoval Gil",
+              "positions": "propietario"
+            },
+            { "name": "Dr. Héctor García Nava", "positions": "suplente" },
+            {
+              "name": "Dr. Laura Liliana López Galindo",
+              "positions": "suplente"
+            }
+          ]
+        },
+        {
+          "name": "consejeros representantes de los alumnos",
+          "integrantes": [
+            { "name": "Tránsito González Medina", "positions": "propietario" },
+            { "name": "Nayla Berenice Muñoz Euan", "positions": "propietario" },
+            { "name": "Axel Acosta Valdés", "positions": "suplente" },
+            {
+              "name": "Enrique Alfonso Retamoza González",
+              "positions": "suplente"
+            }
+          ]
+        }
+      ],
+      "academias": [
+        {
+          "name": "Academias de ciencias naturales y exactas",
+          "integrantes": [
+            {
+              "name": "Dra. Hortencia Silva Jiménez",
+              "positions": "propietario"
+            },
+            {
+              "name": "Dra. Sheila Castellanos Martínez",
+              "positions": "propietario"
+            },
+            {
+              "name": "Dr. José Martin Hernández Ayón",
+              "positions": "propietario"
+            },
+            {
+              "name": "Dr. Francisco Delgadillo Hinojosa",
+              "positions": "suplente"
+            },
+            {
+              "name": "Dra. Tatiana N. Olivares Bañuelos",
+              "positions": "suplente"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "version": {
     "no": 1.0,
     "last_update": ""

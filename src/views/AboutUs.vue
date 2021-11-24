@@ -28,12 +28,25 @@
 
       <v-container style="margin-top:100px">
         <v-row justify="center">
-          <v-col md="10" xl="10" lg="10" cols="12">
+          <v-col md="4" xl="4" lg="4" cols="12">
             <h5>{{ $t("mensaje_bienvenida.title") }}</h5>
             <p class="body mt-3 mb-8" v-html="$t('mensaje_bienvenida.content')" />
           </v-col>
+
+          <v-col md="6" xl="6" lg="6" cols="12" class="d-flex justify-center pt-8">
+            <iframe
+              width="560"
+              height="315"
+              src="http://www.youtube.com/embed/Lp3NnmTqCBE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </v-col>
+
           <v-col data-aos="fade-right" md="7" xl="6" lg="6" cols="12" class="justify-center d-flex">
-            <v-card class="pa-5" flat hover>
+            <v-card class="py-5 pr-5" flat hover>
               <h5>{{ $t("mision.title") }}</h5>
               <p class="body">
                 {{ $t("mision.content") }}

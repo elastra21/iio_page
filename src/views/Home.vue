@@ -66,9 +66,9 @@
     </v-carousel>
 
     <v-container fluid class="px-5" style="height:auto !important; ">
-      <v-row class="justify-center noticias mt-10">
+      <!-- <v-row class="justify-center noticias mt-10">
         <v-col cols="10">
-          <!-- <h3 data-aos="fade-right">{{ $t("investigacion.title") }}</h3> -->
+
         </v-col>
 
         <v-col
@@ -90,7 +90,7 @@
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/Lp3NnmTqCBE"
+                src="http://www.youtube.com/embed/Lp3NnmTqCBE"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -99,7 +99,7 @@
             </v-col>
           </v-row>
         </v-col>
-      </v-row>
+      </v-row> -->
 
       <v-row class="justify-center noticias mt-10">
         <v-col cols="10">
